@@ -1,0 +1,138 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 2499,
+      "stock": 15,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+      "sales": 142
+    },
+    {
+      "id": 2,
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "price": 3299,
+      "stock": 8,
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+      "sales": 98
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 5999,
+      "stock": 0,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+      "sales": 210
+    },
+    {
+      "id": 4,
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 899,
+      "stock": 40,
+      "rating": 4.1,
+      "image": "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=400",
+      "sales": 65
+    },
+    {
+      "id": 5,
+      "name": "Backpack",
+      "category": "Accessories",
+      "price": 1799,
+      "stock": 22,
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
+      "sales": 87
+    },
+    {
+      "id": 6,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 1999,
+      "stock": 0,
+      "rating": 4.0,
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+      "sales": 156
+    },
+    {
+      "id": 7,
+      "name": "Formal Shirt",
+      "category": "Clothing",
+      "price": 1299,
+      "stock": 30,
+      "rating": 3.9,
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400",
+      "sales": 44
+    },
+    {
+      "id": 8,
+      "name": "Coffee Maker",
+      "category": "Home & Kitchen",
+      "price": 4499,
+      "stock": 12,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400",
+      "sales": 73
+    },
+    {
+      "id": 9,
+      "name": "Gaming Mouse",
+      "category": "Electronics",
+      "price": 1599,
+      "stock": 18,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400",
+      "sales": 189
+    },
+    {
+      "id": 10,
+      "name": "Leather Wallet",
+      "category": "Accessories",
+      "price": 999,
+      "stock": 25,
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400",
+      "sales": 56
+    },
+    {
+      "id": 11,
+      "name": "Sunglasses",
+      "category": "Accessories",
+      "price": 1499,
+      "stock": 0,
+      "rating": 3.8,
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
+      "sales": 38
+    },
+    {
+      "id": 12,
+      "name": "Desk Lamp",
+      "category": "Home & Kitchen",
+      "price": 1299,
+      "stock": 33,
+      "rating": 4.0,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400",
+      "sales": 61
+    }
+  ],
+  "orders": [
+    { "id": 1001, "customer": "John Mathew", "date": "2026-08-05", "status": "Delivered", "total": 5499, "items": 3 },
+    { "id": 1002, "customer": "Priya Nair", "date": "2026-08-06", "status": "Pending", "total": 2499, "items": 1 },
+    { "id": 1003, "customer": "Arjun Menon", "date": "2026-08-07", "status": "Shipped", "total": 8798, "items": 4 },
+    { "id": 1004, "customer": "Sara Thomas", "date": "2026-08-08", "status": "Delivered", "total": 3299, "items": 1 },
+    { "id": 1005, "customer": "Vishnu Kumar", "date": "2026-08-09", "status": "Cancelled", "total": 1999, "items": 1 },
+    { "id": 1006, "customer": "Anjali Pillai", "date": "2026-08-10", "status": "Delivered", "total": 6498, "items": 2 },
+    { "id": 1007, "customer": "Rahul Nambiar", "date": "2026-08-11", "status": "Pending", "total": 1299, "items": 1 },
+    { "id": 1008, "customer": "Meera Krishnan", "date": "2026-08-12", "status": "Shipped", "total": 4499, "items": 1 },
+    { "id": 1009, "customer": "Kiran Raj", "date": "2026-08-13", "status": "Delivered", "total": 1599, "items": 1 },
+    { "id": 1010, "customer": "Divya Suresh", "date": "2026-08-14", "status": "Delivered", "total": 999, "items": 1 },
+    { "id": 1011, "customer": "Nikhil Varma", "date": "2026-08-15", "status": "Pending", "total": 3798, "items": 2 },
+    { "id": 1012, "customer": "Fathima Beevi", "date": "2026-08-16", "status": "Delivered", "total": 2599, "items": 2 }
+  ]
+}

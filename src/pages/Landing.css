@@ -1,0 +1,378 @@
+/* ============================================================
+   Landing page design tokens — scoped under .landing so nothing
+   here leaks into the Bootstrap-driven admin screens.
+
+   Palette
+     --ink          #101828  headline / body text
+     --paper        #F5F7FB  page background (matches app shell)
+     --kraft        #D8B87B  shipping-tag body
+     --kraft-dark   #A9793C  tag string / rope, darker kraft edge
+     --stamp        #C1442D  ink-stamp red, used sparingly
+     --teal         #1F6F5C  secondary accent, links / eyebrow labels
+     --line         #DDE2EA  hairline dividers
+   Type
+     display: 'Space Grotesk'   – headlines, tag labels
+     mono:    'JetBrains Mono'  – SKU/order codes, barcode, stats
+     body:    system stack      – paragraphs
+   ============================================================ */
+
+.landing {
+  --ink: #101828;
+  --paper: #f5f7fb;
+  --kraft: #d8b87b;
+  --kraft-dark: #a9793c;
+  --stamp: #c1442d;
+  --teal: #1f6f5c;
+  --line: #dde2ea;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.landing .font-display {
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+}
+
+.landing .font-mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ---------- Top bar ---------- */
+.landing-topbar {
+  border-bottom: 1px solid var(--line);
+}
+
+.landing-topbar .brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+}
+
+/* ---------- Hero ---------- */
+.landing-hero {
+  padding-top: clamp(3rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.landing-hero .eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--teal);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.landing-hero .eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: inline-block;
+}
+
+.landing-hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 1.04;
+  font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+  letter-spacing: -0.01em;
+}
+
+.landing-hero .lede {
+  font-size: 1.1rem;
+  color: #46506a;
+  max-width: 34rem;
+}
+
+.landing-hero .btn-ink {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.landing-hero .btn-ink:hover {
+  background: #000;
+  transform: translateY(-1px);
+  color: var(--paper);
+}
+
+.landing-hero .btn-outline-ink {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  background: transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.landing-hero .btn-outline-ink:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+
+/* ---------- Signature element: the shipping tag ---------- */
+.tag-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+
+.tag-inner {
+  width: 300px;
+}
+
+.tag-string {
+  width: 2px;
+  height: 46px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--kraft-dark) 0,
+    var(--kraft-dark) 5px,
+    transparent 5px,
+    transparent 9px
+  );
+}
+
+.shipping-tag {
+  --tag-w: 300px;
+  width: var(--tag-w);
+  background: var(--kraft);
+  border: 1px solid var(--kraft-dark);
+  border-radius: 6px;
+  padding: 1.5rem 1.35rem 1.35rem;
+  position: relative;
+  transform: rotate(3.5deg);
+  box-shadow: 0 18px 40px -18px rgba(16, 24, 40, 0.35);
+  color: #3a2c14;
+}
+
+.shipping-tag::before {
+  /* punched hole */
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--kraft-dark);
+}
+
+.shipping-tag .tag-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 0.75rem;
+}
+
+.shipping-tag .tag-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 0.9rem;
+  line-height: 1.15;
+}
+
+.shipping-tag .barcode {
+  margin-top: 0.9rem;
+  height: 34px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #3a2c14 0px,
+    #3a2c14 2px,
+    transparent 2px,
+    transparent 4px,
+    #3a2c14 4px,
+    #3a2c14 5px,
+    transparent 5px,
+    transparent 9px,
+    #3a2c14 9px,
+    #3a2c14 12px,
+    transparent 12px,
+    transparent 14px
+  );
+  border-radius: 2px;
+}
+
+.shipping-tag .tag-price {
+  margin-top: 0.9rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.stamp {
+  position: absolute;
+  top: 40%;
+  right: -18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--stamp);
+  border: 2.5px solid var(--stamp);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  transform: rotate(-11deg);
+  opacity: 0.85;
+  background: rgba(245, 247, 251, 0.35);
+}
+
+/* ---------- Live stats strip ---------- */
+.stats-strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.stats-strip .stat-value {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--ink);
+}
+
+.stats-strip .stat-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7a869a;
+}
+
+/* ---------- Manifest / feature list ---------- */
+.manifest-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.manifest-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.manifest-row {
+  border-top: 1px solid var(--line);
+  padding: 1.6rem 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.manifest-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.manifest-code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--teal);
+  background: rgba(31, 111, 92, 0.08);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  height: fit-content;
+  margin-top: 0.2rem;
+}
+
+.manifest-row h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.manifest-row p {
+  color: #46506a;
+  margin-bottom: 0;
+  max-width: 40rem;
+}
+
+.manifest-row .manifest-icon {
+  font-size: 1.3rem;
+  color: var(--ink);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 16px;
+  padding: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0 auto clamp(3rem, 6vw, 5rem);
+}
+
+.cta-band h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.cta-band .btn-paper {
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.cta-band .btn-paper:hover {
+  transform: translateY(-1px);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-hero .btn-ink,
+  .landing-hero .btn-outline-ink,
+  .cta-band .btn-paper {
+    transition: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tag-inner {
+    width: 260px;
+  }
+  .shipping-tag {
+    --tag-w: 260px;
+    transform: rotate(2deg);
+  }
+  .stamp {
+    right: 4px;
+  }
+}

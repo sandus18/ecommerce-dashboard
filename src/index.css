@@ -1,0 +1,21 @@
+body {
+  background-color: #f5f7fb;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.product-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-brand i {
+  color: #0d6efd;
+}
+
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
