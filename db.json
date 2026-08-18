@@ -56,7 +56,7 @@
       "category": "Electronics",
       "price": 1999,
       "stock": 0,
-      "rating": 4.0,
+      "rating": 4,
       "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
       "sales": 156
     },
@@ -79,16 +79,6 @@
       "rating": 4.4,
       "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400",
       "sales": 73
-    },
-    {
-      "id": 9,
-      "name": "Gaming Mouse",
-      "category": "Electronics",
-      "price": 1599,
-      "stock": 18,
-      "rating": 4.7,
-      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400",
-      "sales": 189
     },
     {
       "id": 10,
@@ -116,23 +106,116 @@
       "category": "Home & Kitchen",
       "price": 1299,
       "stock": 33,
-      "rating": 4.0,
+      "rating": 4,
       "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400",
       "sales": 61
+    },
+    {
+      "name": "keyboard",
+      "category": "Electronics",
+      "price": 1500,
+      "stock": 6,
+      "rating": 3.9,
+      "image": "https://zebronics.com/cdn/shop/files/Zeb-KeypadA1-pic1_2b023035-b06d-4a67-a9ca-25b2f2dd1b4b.jpg?v=1748246948&width=2048",
+      "id": 13
     }
   ],
   "orders": [
-    { "id": 1001, "customer": "John Mathew", "date": "2026-08-05", "status": "Delivered", "total": 5499, "items": 3 },
-    { "id": 1002, "customer": "Priya Nair", "date": "2026-08-06", "status": "Pending", "total": 2499, "items": 1 },
-    { "id": 1003, "customer": "Arjun Menon", "date": "2026-08-07", "status": "Shipped", "total": 8798, "items": 4 },
-    { "id": 1004, "customer": "Sara Thomas", "date": "2026-08-08", "status": "Delivered", "total": 3299, "items": 1 },
-    { "id": 1005, "customer": "Vishnu Kumar", "date": "2026-08-09", "status": "Cancelled", "total": 1999, "items": 1 },
-    { "id": 1006, "customer": "Anjali Pillai", "date": "2026-08-10", "status": "Delivered", "total": 6498, "items": 2 },
-    { "id": 1007, "customer": "Rahul Nambiar", "date": "2026-08-11", "status": "Pending", "total": 1299, "items": 1 },
-    { "id": 1008, "customer": "Meera Krishnan", "date": "2026-08-12", "status": "Shipped", "total": 4499, "items": 1 },
-    { "id": 1009, "customer": "Kiran Raj", "date": "2026-08-13", "status": "Delivered", "total": 1599, "items": 1 },
-    { "id": 1010, "customer": "Divya Suresh", "date": "2026-08-14", "status": "Delivered", "total": 999, "items": 1 },
-    { "id": 1011, "customer": "Nikhil Varma", "date": "2026-08-15", "status": "Pending", "total": 3798, "items": 2 },
-    { "id": 1012, "customer": "Fathima Beevi", "date": "2026-08-16", "status": "Delivered", "total": 2599, "items": 2 }
+    {
+      "id": 1001,
+      "customer": "John Mathew",
+      "date": "2026-08-05",
+      "status": "Delivered",
+      "total": 5499,
+      "items": 3
+    },
+    {
+      "id": 1002,
+      "customer": "Priya Nair",
+      "date": "2026-08-06",
+      "status": "Pending",
+      "total": 2499,
+      "items": 1
+    },
+    {
+      "id": 1003,
+      "customer": "Arjun Menon",
+      "date": "2026-08-07",
+      "status": "Shipped",
+      "total": 8798,
+      "items": 4
+    },
+    {
+      "id": 1004,
+      "customer": "Sara Thomas",
+      "date": "2026-08-08",
+      "status": "Delivered",
+      "total": 3299,
+      "items": 1
+    },
+    {
+      "id": 1005,
+      "customer": "Vishnu Kumar",
+      "date": "2026-08-09",
+      "status": "Cancelled",
+      "total": 1999,
+      "items": 1
+    },
+    {
+      "id": 1006,
+      "customer": "Anjali Pillai",
+      "date": "2026-08-10",
+      "status": "Delivered",
+      "total": 6498,
+      "items": 2
+    },
+    {
+      "id": 1007,
+      "customer": "Rahul Nambiar",
+      "date": "2026-08-11",
+      "status": "Pending",
+      "total": 1299,
+      "items": 1
+    },
+    {
+      "id": 1008,
+      "customer": "Meera Krishnan",
+      "date": "2026-08-12",
+      "status": "Shipped",
+      "total": 4499,
+      "items": 1
+    },
+    {
+      "id": 1009,
+      "customer": "Kiran Raj",
+      "date": "2026-08-13",
+      "status": "Delivered",
+      "total": 1599,
+      "items": 1
+    },
+    {
+      "id": 1010,
+      "customer": "Divya Suresh",
+      "date": "2026-08-14",
+      "status": "Delivered",
+      "total": 999,
+      "items": 1
+    },
+    {
+      "id": 1011,
+      "customer": "Nikhil Varma",
+      "date": "2026-08-15",
+      "status": "Pending",
+      "total": 3798,
+      "items": 2
+    },
+    {
+      "id": 1012,
+      "customer": "Fathima Beevi",
+      "date": "2026-08-16",
+      "status": "Delivered",
+      "total": 2599,
+      "items": 2
+    }
   ]
 }
