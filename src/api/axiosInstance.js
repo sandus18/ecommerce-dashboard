@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base URL for the JSON Server REST API.
 // Run `npm run server` to start json-server on this port (see package.json).
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
